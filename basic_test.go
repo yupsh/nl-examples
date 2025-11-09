@@ -3,13 +3,13 @@ package nl_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/nl"
 )
 
 func ExampleNl_basic() {
 	// echo "First line\nSecond line\nThird line" | nl
-	yup.MustRun(
+	gloo.MustRun(
 		Nl(strings.NewReader("First line\nSecond line\nThird line")),
 	)
 	// Output:
@@ -17,4 +17,3 @@ func ExampleNl_basic() {
 	//      2	Second line
 	//      3	Third line
 }
-
